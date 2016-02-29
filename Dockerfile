@@ -1,10 +1,8 @@
 FROM python:2.7
 
-ENV INSTALL_DIR /opt/https-test-server
-RUN mkdir -p $INSTALL_DIR
+COPY server.py /
 
-WORKDIR $INSTALL_DIR
-COPY server.py $INSTALL_DIR
+WORKDIR /
 
 VOLUME /ssl
 
